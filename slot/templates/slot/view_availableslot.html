@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Available slot</title>
+</head>
+<body><center>
+	<table border="2">
+		<h1>Available Slot</h1>
+		<tr>
+			<th>Date</th>
+			<th>Time</th>
+		</tr>
+        {% for i in ff %}
+		<tr>
+			<td>{{ i.date }}</td>
+			<td>{{ i.time }}</td>
+		</tr>
+        {% endfor %}
+</table>
+</body>
+</html>

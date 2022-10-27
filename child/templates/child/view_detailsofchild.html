@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Details of child</title>
+</head>
+<body><center>
+	<table border="2">
+		<h1>DETAILS OF CHILD</h1>
+		<tr>
+			<th>Name</th>
+			<th>Age</th>
+			<th>DOB</th>
+			<th>Vaccination report</th>
+
+		</tr>
+        {% for i in bb %}
+		<tr>
+		<td>{{ i.name }}</td>
+		<td>{{ i.age }}</td>
+		<td>{{ i.dob }}</td>
+		<td>{{ i.vaccination_report }}</td>
+
+
+        </tr>
+        {% endfor %}
+     </table>
+
+</body>
+</html>

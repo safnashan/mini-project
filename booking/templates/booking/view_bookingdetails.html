@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Booking details</title>
+</head>
+<body><center>
+	<table border="2">
+		<h1>Booking details</h1>
+		<tr>
+            <th>doctor name</th>
+			<th>Contact no</th>
+			<th>Time</th>
+			<th>Status</th>
+
+			<th></th>
+		</tr>
+        {% for i in aa %}
+		<tr>
+			<td>{{ i.doctor_name}}</td>
+			<td>{{ i.contact_no }}</td>
+            <td>{{ i.time }}</td>
+            <td>{{ i.status }}</td>
+			<td><a href=""></a></td>
+
+		</tr>
+        {% endfor %}
+	</table>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>booking details</title>
+</head>
+<body>
+	<center>
+	<h1>BOOKING DETAILS</h1>
+	<form method="post">
+		<table>
+            {% csrf_token %}
+			<tr>
+				<th>doctor name:</th>
+				<td><input type="text" name="dr"></td>
+			</tr>
+			<tr>
+				<th>Time</th>
+				<td><input type="Time" name="time"></td>
+			</tr>
+            <tr>
+                <th>contact no</th>
+                <td><input type="phone" name="no" ></td>
+            </tr>
+            <tr>
+                <th>parent</th>
+                <td>
+                    <select name="p">
+                        {% for i in h %}
+                             <option value="{{ i.p_id}}">{{ i.name }}</option>
+                        {% endfor %}
+
+                    </select>
+                </td>
+            </tr>
+         <tr>
+                <th>child</th>
+                <td>
+                    <select name="c">
+                        {% for i in g %}
+                             <option value="{{ i.c_id}}">{{ i.name }}</option>
+                        {% endfor %}
+
+                    </select>
+                </td>
+            </tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" name="submit"></td>
+			</tr>
+
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Date&time of vaccination</title>
+</head>
+<body><center>
+	<table border="2">
+		<h1>DATE&TIME OF VACCINATION</h1>
+		<tr>
+			<th>Date</th>
+			<th>Time</th>
+			<th>Age catogory</th>
+            <th>status</th>
+		</tr>
+        {% for i in hi %}
+		<tr>
+		<td>{{ i.date }}</td>
+		<td>{{ i.time }}</td>
+		<td>{{ i.age_category }}</td>
+        <td>{{ i.status }}</td>
+        <td><a href="/vaccination/bk/{{ i.vaccination_id }}">book</a> </td>
+    	</tr>
+        {% endfor %}
+     </table>
+
+</body>
+</html>

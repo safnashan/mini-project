@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hospital profile</title>
+</head>
+<body><center>
+	<table border="2">
+		<h1>HOSPITAL PROFILE</h1>
+		<tr>
+			<th>Name</th>
+			<th>Location</th>
+			<th>Contact no</th>
+			<th>E_mail</th>
+			<th>Since</th>
+		</tr>
+        {% for i in cc %}
+		<tr>
+			<td>{{ i.name }}</td>
+			<td>{{ i.location }}</td>
+			<td>{{ i.contact_no }}</td>
+			<td>{{ i.e_mail }}</td>
+			<td>{{ i.since }}</td>
+		</tr>
+        {% endfor %}
+	</table>
+
+</body>
+</html>
